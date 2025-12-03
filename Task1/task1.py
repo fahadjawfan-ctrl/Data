@@ -12,3 +12,25 @@ Original file is located at
 cel= float(input('Enter the temperature in Celsius  "C" : ' ))
 feh = cel*(9/5)+32
 print(f"The temperature in Fahrenheit = {chr(176)}{feh}")
+
+"""###Enhancement for the program"""
+
+chose = input("Enter the temperature you wnat to convert 'C' for Celsius  and 'F'Fahrenheit : ")
+temper= float(input("Enter the temperature : "))
+flag= False
+calctemp= 0
+while flag == False:
+
+  if chose.upper()=="C":
+    calctemp= temper*(9/5)+32
+    print(f"The convert form Celsius to Fahrenheit is {chr(176)}{calctemp}")
+    flag == True
+    break
+  elif chose.upper()=="F":
+    calctemp= (temper -32)*(5/9)
+    print(f"The convert form Fahrenheit to Celsius is {chr(176)}{calctemp}")
+    flag == True
+    break
+  else:
+    print("Error")
+    chose = input("Enter the temperature you wnat to convert 'C' for Celsius  and 'F'Fahrenheit : ")
